@@ -3,15 +3,15 @@ pragma solidity ^0.4.18;
 
 // ----------------------------------------------------------------------------
 
-// '0xBitcoin Token' contract
+// '0xWanliuno Token' contract
 
 // Mineable ERC20 Token using Proof Of Work
 
 //
 
-// Symbol      : 0xBTC
+// Symbol      : 0xWLI
 
-// Name        : 0xBitcoin Token
+// Name        : 0xWanliuno Token
 
 // Total supply: 21,000,000.00
 
@@ -192,7 +192,7 @@ contract Owned {
 
 // ----------------------------------------------------------------------------
 
-contract _0xBitcoinToken is ERC20Interface, Owned {
+contract _0xWanliunoToken is ERC20Interface, Owned {
 
     using SafeMath for uint;
     using ExtendedMath for uint;
@@ -223,7 +223,7 @@ contract _0xBitcoinToken is ERC20Interface, Owned {
 
 
       //a big number is easier ; just find a solution that is smaller
-    //uint public  _MAXIMUM_TARGET = 2**224;  bitcoin uses 224
+    //uint public  _MAXIMUM_TARGET = 2**224;  wanliuno uses 224
     uint public  _MAXIMUM_TARGET = 2**234;
 
 
@@ -261,13 +261,13 @@ contract _0xBitcoinToken is ERC20Interface, Owned {
 
     // ------------------------------------------------------------------------
 
-    function _0xBitcoinToken() public onlyOwner{
+    function _0xWanliunoToken() public onlyOwner{
 
 
 
-        symbol = "0xBTC";
+        symbol = "0xWLI";
 
-        name = "0xBitcoin Token";
+        name = "0xWanliuno Token";
 
         decimals = 8;
 
@@ -380,8 +380,8 @@ contract _0xBitcoinToken is ERC20Interface, Owned {
 
 
 
-    //https://en.bitcoin.it/wiki/Difficulty#What_is_the_formula_for_difficulty.3F
-    //as of 2017 the bitcoin difficulty was up to 17 zeroes, it was only 8 in the early days
+    //https://en.wanliuno.it/wiki/Difficulty#What_is_the_formula_for_difficulty.3F
+    //as of 2017 the wanliuno difficulty was up to 17 zeroes, it was only 8 in the early days
 
     //readjust the target by 5 percent
     function _reAdjustDifficulty() internal {
@@ -390,7 +390,7 @@ contract _0xBitcoinToken is ERC20Interface, Owned {
         uint ethBlocksSinceLastDifficultyPeriod = block.number - latestDifficultyPeriodStarted;
         //assume 360 ethereum blocks per hour
 
-        //we want miners to spend 10 minutes to mine each 'block', about 60 ethereum blocks = one 0xbitcoin epoch
+        //we want miners to spend 10 minutes to mine each 'block', about 60 ethereum blocks = one 0xwanliuno epoch
         uint epochsMined = _BLOCKS_PER_READJUSTMENT; //256
 
         uint targetEthBlocksPerDiffPeriod = epochsMined * 60; //should be 60 times slower than ethereum

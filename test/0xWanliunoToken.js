@@ -1,4 +1,4 @@
-var _0xBitcoinToken = artifacts.require("./_0xBitcoinToken.sol");
+var _0xWanliunoToken = artifacts.require("./_0xWanliunoToken.sol");
 
 var ethUtil =  require('ethereumjs-util');
 var web3utils =  require('web3-utils');
@@ -21,13 +21,13 @@ let web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 //Test rewards decreasing
 
 
-contract('_0xBitcoinToken', function(accounts) {
+contract('_0xWanliunoToken', function(accounts) {
 
 
     it("can deploy ", async function () {
 
       console.log( 'deploying token' )
-      var tokenContract = await _0xBitcoinToken.deployed();
+      var tokenContract = await _0xWanliunoToken.deployed();
 
 
 
@@ -45,7 +45,7 @@ contract('_0xBitcoinToken', function(accounts) {
 
 //7.3426930413956622283065143620738574142638959639431768834166324387693517887725e+76)
 
-    var tokenContract = await _0xBitcoinToken.deployed();
+    var tokenContract = await _0xWanliunoToken.deployed();
 
     console.log('contract')
 
@@ -107,7 +107,7 @@ it("can be mined", async function () {
   await printBalances(accounts)
 
 
-  var tokenContract = await _0xBitcoinToken.deployed();
+  var tokenContract = await _0xWanliunoToken.deployed();
 
   console.log('contract')
 

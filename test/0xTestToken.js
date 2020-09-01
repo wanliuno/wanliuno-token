@@ -45,7 +45,7 @@ contract('_0xTestToken', function(accounts) {
 
 //7.3426930413956622283065143620738574142638959639431768834166324387693517887725e+76)
 
-    var tokenContract = await _0xBitcoinToken.deployed();
+    var tokenContract = await _0xWanliunoToken.deployed();
 
     console.log('contract')
 
@@ -107,7 +107,7 @@ it("can be mined", async function () {
   await printBalances(accounts)
 
 
-  var tokenContract = await _0xBitcoinToken.deployed();
+  var tokenContract = await _0xWanliunoToken.deployed();
 
   console.log('contract')
 

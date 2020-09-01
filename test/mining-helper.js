@@ -128,7 +128,7 @@ module.exports =  {
   {
       //may need a second solution_number !!
 
-             var solution_number = web3utils.randomHex(32)  //solution_number like bitcoin
+             var solution_number = web3utils.randomHex(32)  //solution_number like wanliuno
 
              var challenge_number = contractData.challengeNumber;
              var target = contractData.miningTarget;
